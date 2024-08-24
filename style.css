@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "system-ui", sans-serif;
+}
+.imglogo{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    opacity: 0.8;
+    transition: all 0.6s;
+    }
+.imgLogo:hover {
+    transform: scale(1.1);
+    border-radius: 10px;
+    box-shadow: 0 0 4px #fff;
+    opacity: 1;
+    transition: all 0.6s;
+    }
+body{
+    background: #181818;
+    color:#fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0 1.5em;
+}
+header{
+    background: pink;
+    padding: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 10px;
+    background-color: rgb(207, 156, 190);
+    flex-direction: row;
+}
+ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+li {
+    transition: all 0.5s;
+}
+/*position relative, absolute, fixed, sticky*/
+.menuOculto {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #000;
+    padding: 16px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+li:hover .menuOculto {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: all 0.3s;
+}
+a {
+    color: rgb(33, 31, 33);
+    font-weight: 500;
+    transition: all 0.3s;
+}
+li:hover {
+    transform: translateY(-4px);
+    transition: all 0.3s;
+}
+a:hover {
+    color: #f50cf5;
+    transition: all 0.3s;
+}
+.cards-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+main{
+    padding: 8px;
+} 
+.title-cards-container{
+    background-color: black;
+    color: white;
+    padding: 1.2em .5em;
+    margin: 0;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+    
+.card{
+    background-color: black;
+    color: white;
+    padding: 1em;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.card-title{
+    font-size: 25px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.card-img{
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+    
+.card-description{
+    font-size: 18px;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.formulario{
+    background: #222222;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr; 
+}
+
+.formulario label{
+    display: block;
+}
+
+.formulario p {
+    margin: 0;
+    padding: 1em;
+}
+   
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+footer{
+    margin-top: auto;
+    background: pink;
+    color: #000;
+}
+
+@media(min-width: 720px){
+    .cards-container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .title-cards-container{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .formulario{
+        grid-template-columns: 1fr 1fr; 
+    }
+    }
+    
+@media(min-width: 992px){
+    .cards-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .title-cards-container{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .formulario{
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+    }
+    
+    
+    
